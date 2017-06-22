@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">KVC-ICT</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="main_str_1">ยินดีต้อนรับเข้าสู่ระบบตรวจสอบสถานะอุปกรณ์</string>
+    <string name="main_str_2">กรุณาเลือกการแสดงสถานะในแต่ละแบบ</string>
 </resources>
