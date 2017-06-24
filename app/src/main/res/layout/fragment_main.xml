@@ -30,6 +30,7 @@
         android:layout_marginTop="10dp">
 
         <ImageButton
+            android:id="@+id/imgBtnOverview"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/table"
@@ -54,6 +55,7 @@
 
 
         <ImageButton
+            android:id="@+id/imgBtnCategory"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/computer"
@@ -77,6 +79,7 @@
 
 
         <ImageButton
+            android:id="@+id/imgBtnRoom"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/all"
@@ -100,6 +103,7 @@
             android:layout_marginTop="5dp"/>
 
         <ImageButton
+            android:id="@+id/imgBtnClean"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/clean"
@@ -123,6 +127,7 @@
             android:layout_marginTop="5dp"/>
 
         <ImageButton
+            android:id="@+id/imgBtnNotAvailable"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/error2"
@@ -146,6 +151,7 @@
             android:layout_marginTop="5dp"/>
 
         <ImageButton
+            android:id="@+id/imgBtnAmiss"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/warning"

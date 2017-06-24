@@ -16,7 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name="app.kvc.activity.OverviewActivity" />
+        <activity android:name="app.kvc.activity.CategoryActivity" />
+        <activity android:name="app.kvc.activity.RoomActivity" />
+        <activity android:name="app.kvc.activity.AmissActivity" />
+        <activity android:name="app.kvc.activity.NotAvailableActivity" />
+        <activity android:name="app.kvc.activity.CleanActivity"></activity>
     </application>
 
 </manifest>
