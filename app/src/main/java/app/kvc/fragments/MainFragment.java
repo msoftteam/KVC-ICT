@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
+import app.kvc.activity.AmissActivity;
 import app.kvc.activity.CategoryActivity;
 import app.kvc.activity.CleanActivity;
 import app.kvc.activity.NotAvailableActivity;
@@ -82,6 +83,14 @@ public class MainFragment extends Fragment {
             }
         });
 
+        imgBtnAmiss.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AmissActivity.class);
+                startActivity(intent);
+                getActivity().overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+            }
+        });
         return rootView;
 
     }

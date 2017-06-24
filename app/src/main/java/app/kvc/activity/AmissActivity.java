@@ -2,6 +2,7 @@ package app.kvc.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import app.kvc.kvc_ict.R;
 
@@ -11,5 +12,21 @@ public class AmissActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_amiss);
+        // add back button on activity action bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("การใช้งานผิดปกติ");
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        // click back button
+        if (item.getItemId() == android.R.id.home) {
+            this.finish();
+            this.overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }
