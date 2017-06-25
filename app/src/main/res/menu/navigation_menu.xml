@@ -9,11 +9,15 @@
 
         <item android:id="@+id/nav_manage_user"
             android:icon="@mipmap/ic_accessibility_black_24dp"
-            android:title="จัดการข้อมูลผู้ใช้" />
+            android:title="จัดการผู้ใช้" />
 
         <item android:id="@+id/nav_manage_room"
             android:icon="@mipmap/ic_widgets_black_24dp"
-            android:title="จัดการข้อมูลห้องเรียน" />
+            android:title="จัดการห้องเรียน" />
+
+        <item android:id="@+id/nav_manage_category"
+            android:icon="@mipmap/ic_list_black_24dp"
+            android:title="จัดการประเภทครุภัณฑ์" />
 
     </group>
 

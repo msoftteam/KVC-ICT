@@ -1,6 +1,7 @@
 package app.kvc.kvc_ict;
 
 import android.app.FragmentManager;
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -59,7 +60,22 @@ public class MainActivity extends AppCompatActivity {
                 } /*else if (id == R.id.nav_setting) {
                     Toast.makeText(getApplicationContext(), "setting click", Toast.LENGTH_SHORT).show();
                 }*/ else if (id == R.id.nav_logout) {
-                    Toast.makeText(getApplicationContext(), "Logout click", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(), "Logout click", Toast.LENGTH_SHORT).show();
+
+                    final ProgressDialog progressDialog = new ProgressDialog(MainActivity.this,
+                            R.style.Theme_AppCompat_Light_Dialog);
+                    progressDialog.setIndeterminate(true);
+                    progressDialog.setMessage("Logout...");
+                    progressDialog.show();
+
+                    new android.os.Handler().postDelayed(
+                            new Runnable() {
+                                public void run() {
+                                    progressDialog.dismiss();
+                                    logout();
+                                }
+                            }, 3000);
+
                 }
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 return true;
@@ -85,5 +101,10 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Report Problem", Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void logout() {
+        finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 }
