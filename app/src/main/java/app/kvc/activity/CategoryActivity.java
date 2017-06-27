@@ -11,8 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import app.kvc.adapters.CategoryRecyclerAdapter;
-import app.kvc.adapters.OverviewRecyclerAdapter;
-import app.kvc.adapters.RoomRecyclerAdapter;
 import app.kvc.kvc_ict.R;
 import app.kvc.model.OverviewModel;
 
