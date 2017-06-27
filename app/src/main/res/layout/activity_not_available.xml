@@ -1,199 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="app.kvc.activity.NotAvailableActivity">
+    android:orientation="vertical">
 
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="อุปกรณ์ที่ใช้งานไม่ได้"
-        android:textSize="26dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.13"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.033" />
+        android:paddingBottom="5dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="5dp"
+        android:text="ครุภัณฑ์ที่ไม่สามารถใช้งานได้"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
 
-    <LinearLayout
-        android:layout_width="345dp"
-        android:layout_height="20dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.236">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_marginRight="1dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="รหัสอุปกรณ์"
-            tools:layout_editor_absoluteX="21dp"
-            tools:layout_editor_absoluteY="143dp" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="รายการ"
-            tools:layout_editor_absoluteX="131dp"
-            tools:layout_editor_absoluteY="143dp" />
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="สถานะ"
-            tools:layout_editor_absoluteX="261dp"
-            tools:layout_editor_absoluteY="143dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="345dp"
-        android:layout_height="20dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.354">
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="110dp"
-            android:layout_height="20dp"
-            android:gravity="center"
-            android:text="12345"
-
-            tools:layout_editor_absoluteX="21dp"
-            tools:layout_editor_absoluteY="143dp" />
-
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="left"
-            android:text="คอมพิวเตอร์"
-            tools:layout_editor_absoluteX="131dp"
-            tools:layout_editor_absoluteY="143dp" />
-
-        <ImageView
-            android:id="@+id/status1"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/presence_online"
-            tools:layout_editor_absoluteX="96dp"
-            tools:layout_editor_absoluteY="272dp" />
-    </LinearLayout>
-
-    <SearchView
-        android:layout_width="355dp"
-        android:layout_height="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.138" />
-
-    <LinearLayout
-        android:layout_width="345dp"
-        android:layout_height="20dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.295">
-
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="110dp"
-            android:layout_height="20dp"
-            android:gravity="center"
-            android:text="12345"
-
-            tools:layout_editor_absoluteX="21dp"
-            tools:layout_editor_absoluteY="143dp" />
-
-        <TextView
-            android:id="@+id/textView17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="left"
-            android:text="คอมพิวเตอร์"
-            tools:layout_editor_absoluteX="131dp"
-            tools:layout_editor_absoluteY="143dp" />
-
-        <ImageView
-            android:id="@+id/status2"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/presence_online"
-            tools:layout_editor_absoluteX="96dp"
-            tools:layout_editor_absoluteY="272dp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="345dp"
-        android:layout_height="20dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.41">
-
-        <TextView
-            android:id="@+id/textView19"
-            android:layout_width="110dp"
-            android:layout_height="20dp"
-            android:gravity="center"
-            android:text="12345"
-
-            tools:layout_editor_absoluteX="21dp"
-            tools:layout_editor_absoluteY="143dp" />
-
-        <TextView
-            android:id="@+id/textView20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="left"
-            android:text="คอมพิวเตอร์"
-            tools:layout_editor_absoluteX="131dp"
-            tools:layout_editor_absoluteY="143dp" />
-
-        <ImageView
-            android:id="@+id/status3"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/presence_invisible"
-            tools:layout_editor_absoluteX="96dp"
-            tools:layout_editor_absoluteY="272dp" />
-    </LinearLayout>
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
