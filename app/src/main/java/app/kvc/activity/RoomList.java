@@ -15,7 +15,7 @@ import app.kvc.adapters.RoomRecyclerAdapter;
 import app.kvc.kvc_ict.R;
 import app.kvc.model.OverviewModel;
 
-public class RoomActivity extends AppCompatActivity {
+public class RoomList extends AppCompatActivity {
     private RecyclerView recyclerViewroom;
     private List<OverviewModel> listroom;
     private RoomRecyclerAdapter RoomRecyclerAdapter;
@@ -88,26 +88,4 @@ public class RoomActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-  /*  @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_room);
-
-        // add back button on activity action bar
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("ห้องเรียน");
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        // click back button
-        if (item.getItemId() == android.R.id.home) {
-            this.finish();
-            this.overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-    */
 }
