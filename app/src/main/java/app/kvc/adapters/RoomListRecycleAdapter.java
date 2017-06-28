@@ -1,5 +1,6 @@
 package app.kvc.adapters;
 
+import android.content.Intent;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
+import app.kvc.activity.CategoryChildActivity;
 import app.kvc.kvc_ict.R;
 import app.kvc.model.RoomModel;
 
@@ -37,14 +39,21 @@ public class RoomListRecycleAdapter extends RecyclerView.Adapter<RoomListRecycle
         holder.txtRoomNum.setText(roomModels.get(position).getRoomNo());
         holder.txtNumAll.setText(roomModels.get(position).getNumAll().toString());
         holder.txtNumBroken.setText(roomModels.get(position).getNumBroken().toString());
-
-        if (roomModels.get(position).getNumImage() == 1) {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CategoryChildActivity.class);
+                v.getContext().startActivity(intent);
+        }
+        });
+      /*  if (roomModels.get(position).getNumImage() == 1) {
             holder.imgArea.setImageResource(R.drawable.img1);
         } else if (roomModels.get(position).getNumImage() == 2) {
             holder.imgArea.setImageResource(R.drawable.img2);
         } else {
             holder.imgArea.setImageResource(R.drawable.img3);
         }
+        */
     }
 
     @Override

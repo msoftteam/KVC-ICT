@@ -10,14 +10,16 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
-import app.kvc.adapters.CategoryRecyclerAdapter;
+import app.kvc.adapters.CategoryListRecycleAdapter;
+import app.kvc.adapters.RoomListRecycleAdapter;
 import app.kvc.kvc_ict.R;
-import app.kvc.model.OverviewModel;
+import app.kvc.model.CategoryModel;
+import app.kvc.model.RoomModel;
 
 public class CategoryActivity extends AppCompatActivity {
-    private RecyclerView recyclerViewcategory;
-    private List<OverviewModel> listcategory;
-    private CategoryRecyclerAdapter CategoryRecyclerAdapter;
+    private RecyclerView recyclerViewCategory;
+    private List<CategoryModel> listcategory;
+    private CategoryListRecycleAdapter CategoryListRecycleAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,52 +28,31 @@ public class CategoryActivity extends AppCompatActivity {
 
         // add back button on activity action bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("ภาพรวมครุภัณฑ์ทั้งหมด");
+        getSupportActionBar().setTitle("ประเภทครุภัณฑ์");
 
-        recyclerViewcategory = (RecyclerView) findViewById(R.id.recyclerView);
+        recyclerViewCategory = (RecyclerView) findViewById(R.id.recyclerView);
         // DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerViewOverview.getContext(), DividerItemDecoration.VERTICAL);
         //recyclerViewOverview.addItemDecoration(dividerItemDecoration);
 
         listcategory = new ArrayList<>();
         initData();
-        CategoryRecyclerAdapter = new CategoryRecyclerAdapter(listcategory);
+        CategoryListRecycleAdapter = new CategoryListRecycleAdapter(listcategory);
 
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerViewcategory.setLayoutManager(mLayoutManager);
-        recyclerViewcategory.setItemAnimator(new DefaultItemAnimator());
-        recyclerViewcategory.setHasFixedSize(true);
-        recyclerViewcategory.setAdapter(CategoryRecyclerAdapter);
+        recyclerViewCategory.setLayoutManager(mLayoutManager);
+        recyclerViewCategory.setItemAnimator(new DefaultItemAnimator());
+        recyclerViewCategory.setHasFixedSize(true);
+        recyclerViewCategory.setAdapter(CategoryListRecycleAdapter);
 
-        CategoryRecyclerAdapter.notifyDataSetChanged();
-
+        CategoryListRecycleAdapter.notifyDataSetChanged();
     }
 
     private void initData() {
-        OverviewModel m = new OverviewModel("10001", "เครื่องคอมพิวเตอร์", 1);
+        CategoryModel m = new CategoryModel("อุปกรณ์คอมพิวเตอร์", 21, 0);
         listcategory.add(m);
-        m = new OverviewModel("10002", "จอคอมพิวเตอร์", 1);
+        m = new CategoryModel("อุปกรณ์อิเล็กทรอนิกส์", 21, 0);
         listcategory.add(m);
-        m = new OverviewModel("10003", "Modem", 1);
-        listcategory.add(m);
-        m = new OverviewModel("10004", "Access Point", 1);
-        listcategory.add(m);
-        m = new OverviewModel("10002", "จอคอมพิวเตอร์", 1);
-        listcategory.add(m);
-        m = new OverviewModel("10003", "Modem", 1);
-        listcategory.add(m);
-        m = new OverviewModel("10004", "Access Point", 1);
-        listcategory.add(m);
-        m = new OverviewModel("10002", "จอคอมพิวเตอร์", 1);
-        listcategory.add(m);
-        m = new OverviewModel("10003", "Modem", 1);
-        listcategory.add(m);
-        m = new OverviewModel("10004", "Access Point", 1);
-        listcategory.add(m);
-        m = new OverviewModel("10002", "จอคอมพิวเตอร์", 1);
-        listcategory.add(m);
-        m = new OverviewModel("10003", "Modem", 1);
-        listcategory.add(m);
-        m = new OverviewModel("10004", "Access Point", 1);
+        m = new CategoryModel("อุปกรณ์ทั่วไป", 21, 0);
         listcategory.add(m);
     }
 

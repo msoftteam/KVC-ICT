@@ -26,7 +26,7 @@ public class RoomActivity extends AppCompatActivity {
 
         // add back button on activity action bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("ภาพรวมครุภัณฑ์ทั้งหมด");
+        getSupportActionBar().setTitle("ครุภัณฑ์ภายในห้องเรียน");
 
         recyclerViewroom = (RecyclerView) findViewById(R.id.recyclerView);
         // DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerViewOverview.getContext(), DividerItemDecoration.VERTICAL);
