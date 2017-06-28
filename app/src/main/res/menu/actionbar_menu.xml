@@ -10,7 +10,7 @@
     <item
         android:id="@+id/action_report_problem"
         android:icon="@mipmap/ic_border_color_white_24dp"
-        android:title="ReportProblem"
+        android:title="Report"
         app:showAsAction="ifRoom" />
 
 </menu>

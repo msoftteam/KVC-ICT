@@ -24,7 +24,8 @@
         <activity android:name="app.kvc.activity.NotAvailableActivity" />
         <activity android:name="app.kvc.activity.CleanActivity" />
         <activity android:name="app.kvc.adapters.RoomRecyclerAdapter" />
-        <activity android:name="app.kvc.adapters.CategoryRecyclerAdapter"></activity>
+        <activity android:name="app.kvc.adapters.CategoryRecyclerAdapter" />
+        <activity android:name="app.kvc.activity.CategoryChildActivity"></activity>
     </application>
 
 </manifest>
