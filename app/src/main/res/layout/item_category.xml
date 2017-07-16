@@ -50,16 +50,16 @@
                 <android.support.v7.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:layout_weight="1"
                     android:padding="5dp"
                     android:text="จำนวนอุปกรณ์ทั้งหมด :"
                     android:textSize="16dp" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    android:id="@+id/textViewNum1"
+                    android:id="@+id/textViewNumAll"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4"
+                    android:layout_weight="3"
                     android:padding="5dp"
                     android:text=""
                     android:textSize="16dp" />
@@ -74,13 +74,13 @@
                 <android.support.v7.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:layout_weight="1"
                     android:padding="5dp"
                     android:text="จำนวนอุปกรณ์ที่เสีย :"
                     android:textSize="16dp" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    android:id="@+id/textViewNum2"
+                    android:id="@+id/textViewNumBroken"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"

@@ -18,7 +18,7 @@ import app.kvc.model.CategoryModel;
 import app.kvc.model.RoomModel;
 
 /**
- * Created by bigm on 26/6/2560.
+ * Created by field on 16/7/2560.
  */
 
 public class CategoryListRecycleAdapter extends RecyclerView.Adapter<CategoryListRecycleAdapter.CategoryListViewHolder> {
@@ -37,9 +37,9 @@ public class CategoryListRecycleAdapter extends RecyclerView.Adapter<CategoryLis
 
     @Override
     public void onBindViewHolder(CategoryListViewHolder holder, int position) {
-        holder.txtCategory.setText(CategoryModels.get(position).getCategory());
-        holder.txtNum1.setText(CategoryModels.get(position).getNum1().toString());
-        holder.txtNum2.setText(CategoryModels.get(position).getNum2().toString());
+        holder.txtCategory.setText(CategoryModels.get(position).getTvCategory());
+        holder.txtNumAll.setText(CategoryModels.get(position).getNumAll().toString());
+        holder.txtNumBroken.setText(CategoryModels.get(position).getNumBroken().toString());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,14 +48,13 @@ public class CategoryListRecycleAdapter extends RecyclerView.Adapter<CategoryLis
                 //Toast.makeText(v.getContext(), "Click View", Toast.LENGTH_SHORT).show();
             }
         });
-     /*   if (CategoryModels.get(position).getNumImage() == 1) {
-            holder.imgArea.setImageResource(R.drawable.img1);
+        if (CategoryModels.get(position).getNumImage() == 1) {
+            holder.imageAer.setImageResource(R.drawable.computer);
         } else if (CategoryModels.get(position).getNumImage() == 2) {
-            holder.imgArea.setImageResource(R.drawable.img2);
+            holder.imageAer.setImageResource(R.drawable.tablet);
         } else {
-            holder.imgArea.setImageResource(R.drawable.img3);
+            holder.imageAer.setImageResource(R.drawable.computer);
         }
-        */
     }
 
     @Override
@@ -71,14 +70,16 @@ public class CategoryListRecycleAdapter extends RecyclerView.Adapter<CategoryLis
     public class CategoryListViewHolder extends RecyclerView.ViewHolder {
 
         public AppCompatTextView txtCategory;
-        public AppCompatTextView txtNum1;
-        public AppCompatTextView txtNum2;
+        public AppCompatTextView txtNumAll;
+        public AppCompatTextView txtNumBroken;
+        public AppCompatImageView imageAer;
 
         public CategoryListViewHolder(View view) {
             super(view);
             txtCategory = (AppCompatTextView) view.findViewById(R.id.textViewCategory);
-            txtNum1 = (AppCompatTextView) view.findViewById(R.id.textViewNum1);
-            txtNum2 = (AppCompatTextView) view.findViewById(R.id.textViewNum2);
+            txtNumAll = (AppCompatTextView) view.findViewById(R.id.textViewNumAll);
+            txtNumBroken = (AppCompatTextView) view.findViewById(R.id.textViewNumBroken);
+            imageAer = (AppCompatImageView) view.findViewById(R.id.imgArea);
         }
     }
 }

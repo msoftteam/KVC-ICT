@@ -19,9 +19,7 @@ public class RoomModel {
         this.numImage = numImage;
     }
 
-    public String getRoomNo() {
-        return roomNo;
-    }
+    public String getRoomNo() {return roomNo;}
 
     public void setRoomNo(String roomNo) {
         this.roomNo = roomNo;

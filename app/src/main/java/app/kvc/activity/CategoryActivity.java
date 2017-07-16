@@ -16,6 +16,10 @@ import app.kvc.kvc_ict.R;
 import app.kvc.model.CategoryModel;
 import app.kvc.model.RoomModel;
 
+/**
+ * Created by field on 16/7/2560.
+ */
+
 public class CategoryActivity extends AppCompatActivity {
     private RecyclerView recyclerViewCategory;
     private List<CategoryModel> listcategory;
@@ -48,17 +52,17 @@ public class CategoryActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        CategoryModel m = new CategoryModel("อุปกรณ์คอมพิวเตอร์", 21, 0);
+        CategoryModel m = new CategoryModel("อุปกรณ์คอมพิวเตอร์", 21, 0,1);
         listcategory.add(m);
-        m = new CategoryModel("อุปกรณ์อิเล็กทรอนิกส์", 21, 0);
+        m = new CategoryModel("อุปกรณ์อิเล็กทรอนิกส์", 21, 0,1);
         listcategory.add(m);
-        m = new CategoryModel("อุปกรณ์ทั่วไป", 21, 0);
+        m = new CategoryModel("อุปกรณ์ทั่วไป", 21, 0,2
+        );
         listcategory.add(m);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
         // click back button
         if (item.getItemId() == android.R.id.home) {
             this.finish();

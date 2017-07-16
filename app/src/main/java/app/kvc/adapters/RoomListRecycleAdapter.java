@@ -44,15 +44,20 @@ public class RoomListRecycleAdapter extends RecyclerView.Adapter<RoomListRecycle
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), CategoryChildActivity.class);
                 v.getContext().startActivity(intent);
-        }
+            }
         });
-      /*  if (roomModels.get(position).getNumImage() == 1) {
+
+        if (roomModels.get(position).getNumImage() == 1) {
             holder.imgArea.setImageResource(R.drawable.img1);
         } else if (roomModels.get(position).getNumImage() == 2) {
             holder.imgArea.setImageResource(R.drawable.img2);
+        } else if (roomModels.get(position).getNumImage() == 3) {
+            holder.imgArea.setImageResource(R.drawable.img3);
         } else {
             holder.imgArea.setImageResource(R.drawable.img3);
         }
+      /*
+
         */
     }
 
