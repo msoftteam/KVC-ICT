@@ -1,5 +1,6 @@
 package app.kvc.adapters;
 
+import android.content.Intent;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,6 +9,8 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
+import app.kvc.activity.CategoryChildActivity;
+import app.kvc.activity.DetailActivity;
 import app.kvc.kvc_ict.R;
 import app.kvc.model.OverviewModel;
 
@@ -35,6 +38,14 @@ public class CategoryRecyclerAdapter extends RecyclerView.Adapter<CategoryRecycl
     public void onBindViewHolder(OverViewHolder holder, int position) {
         holder.textViewName.setText(listOverviews.get(position).getName());
         holder.textViewId.setText(listOverviews.get(position).getId());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), DetailActivity.class);
+                v.getContext().startActivity(intent);
+                //Toast.makeText(v.getContext(), "Click View", Toast.LENGTH_SHORT).show();
+            }
+        });
 //        holder.textViewStatus.setText(listOverviews.get(position).getStatus().toString());
     }
 

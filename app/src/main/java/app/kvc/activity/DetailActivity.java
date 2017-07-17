@@ -1,27 +1,26 @@
+/**
+ * Created by Filver L Believe on 17/7/2560.
+ */
 package app.kvc.activity;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.MenuItem;
+        import android.os.Bundle;
+        import android.support.v7.app.AppCompatActivity;
+        import android.support.v7.widget.DefaultItemAnimator;
+        import android.support.v7.widget.LinearLayoutManager;
+        import android.support.v7.widget.RecyclerView;
+        import android.view.MenuItem;
 
-import java.util.ArrayList;
-import java.util.List;
+        import java.util.ArrayList;
+        import java.util.List;
 
-import app.kvc.adapters.CategoryListRecycleAdapter;
-import app.kvc.kvc_ict.R;
-import app.kvc.model.CategoryModel;
+        import app.kvc.adapters.DetailAdapter;
+        import app.kvc.kvc_ict.R;
+        import app.kvc.model.DetailModel;
 
-/**
- * Created by field on 17/7/2560.
- */
-
-public class CategoryActivity extends AppCompatActivity {
-    private RecyclerView recyclerViewCategory;
-    private List<CategoryModel> listcategory;
-    private CategoryListRecycleAdapter CategoryListRecycleAdapter;
+public class DetailActivity extends AppCompatActivity {
+    private RecyclerView recyclerViewDetail;
+    private List<DetailModel> listDetail;
+    private DetailAdapter DetailAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,31 +31,30 @@ public class CategoryActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("ประเภทครุภัณฑ์");
 
-        recyclerViewCategory = (RecyclerView) findViewById(R.id.recyclerView);
+        recyclerViewDetail = (RecyclerView) findViewById(R.id.recyclerView);
         // DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerViewOverview.getContext(), DividerItemDecoration.VERTICAL);
         //recyclerViewOverview.addItemDecoration(dividerItemDecoration);
 
-        listcategory = new ArrayList<>();
+        listDetail = new ArrayList<>();
         initData();
-        CategoryListRecycleAdapter = new CategoryListRecycleAdapter(listcategory);
+        DetailAdapter = new DetailAdapter(listDetail);
 
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerViewCategory.setLayoutManager(mLayoutManager);
-        recyclerViewCategory.setItemAnimator(new DefaultItemAnimator());
-        recyclerViewCategory.setHasFixedSize(true);
-        recyclerViewCategory.setAdapter(CategoryListRecycleAdapter);
+        recyclerViewDetail.setLayoutManager(mLayoutManager);
+        recyclerViewDetail.setItemAnimator(new DefaultItemAnimator());
+        recyclerViewDetail.setHasFixedSize(true);
+        recyclerViewDetail.setAdapter(DetailAdapter);
 
-        CategoryListRecycleAdapter.notifyDataSetChanged();
+        DetailAdapter.notifyDataSetChanged();
     }
 
     private void initData() {
-        CategoryModel m = new CategoryModel("อุปกรณ์คอมพิวเตอร์", 21, 0,1);
-        listcategory.add(m);
-        m = new CategoryModel("อุปกรณ์อิเล็กทรอนิกส์", 21, 0,1);
-        listcategory.add(m);
-        m = new CategoryModel("อุปกรณ์ทั่วไป", 21, 0,2
-        );
-        listcategory.add(m);
+        DetailModel m = new DetailModel("","","","","","","","","",1,1);
+        listDetail.add(m);
+        m = new DetailModel("","","","","","","","","",1,1);
+        listDetail.add(m);
+        m = new DetailModel("","","","","","","","","",1,1);
+        listDetail.add(m);
     }
 
     @Override
